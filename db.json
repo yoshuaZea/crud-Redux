@@ -29,6 +29,16 @@
       "nombre": "Rib eye",
       "precio": 550,
       "id": 8
+    },
+    {
+      "nombre": "Pizza",
+      "precio": 200,
+      "id": 9
+    },
+    {
+      "nombre": "Ciruela",
+      "precio": 35,
+      "id": 10
     }
   ]
 }

@@ -60,7 +60,7 @@ export default function(state = initialState, action){
         case PRODUCTO_ELIMINADO_EXITO:
             return {
                 ...state,
-                productos: state.productos.filter(producto => producto.id !== state.productoEliminar),
+                productos: state.productos.filter(producto => producto._id !== state.productoEliminar),
                 productoEliminar: null
             }
         case OBTENER_PRODUCTO_EDITAR:
@@ -72,7 +72,7 @@ export default function(state = initialState, action){
             return {
                 ...state,
                 productoEditar: null,
-                productos: state.productos.map(producto => producto.id === action.payload.id ? producto = action.payload : producto )
+                productos: state.productos.map(producto => producto._id === action.payload._id ? producto = action.payload : producto )
             }
         default:
             return state;

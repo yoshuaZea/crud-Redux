@@ -40,7 +40,7 @@ const Productos = () => {
                     { productos.length === 0 ? <tr><td colSpan="3">No hay productos</td></tr> : (
                         productos.map(producto => (
                             <Producto 
-                                key={producto.id}
+                                key={producto._id}
                                 producto={producto}
                             />
                         ))

@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux'
 import { borrarProductoAction, obtenerProductoEditar } from '../actions/productosActions'
 
 const Producto = ({producto}) => {
-    const { nombre, precio, id } = producto
+    const { nombre, precio, _id } = producto
 
     // Usar hook 
     const dispatch = useDispatch()
@@ -46,7 +46,7 @@ const Producto = ({producto}) => {
     // función que redireccionar de forma programada
     const redireccionarEdicion = producto => {
         dispatch(obtenerProductoEditar(producto))
-        history.push(`/productos/editar/${producto.id}`)
+        history.push(`/productos/editar/${producto._id}`)
     }
 
     return ( 
@@ -62,7 +62,7 @@ const Producto = ({producto}) => {
                 <button
                     type="button"
                     className="btn btn-danger"
-                    onClick={() => confirmarEliminarProducto(id)}
+                    onClick={() => confirmarEliminarProducto(_id)}
                 >Eliminar</button>
             </td>
         </tr>
